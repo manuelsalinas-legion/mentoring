@@ -29,6 +29,7 @@ class TournamentsTableViewController: UITableViewController {
     
     // MARK: - Functions
     /// Obtain Json data
+    // FIXME: Private Access level missing in function
     func getJson() {
         guard let jsonUrl = Bundle(for: type(of: self)).path(forResource: "soccer_info", ofType: "json") else { return }
         guard let jsonString = try? String(contentsOf: URL(fileURLWithPath: jsonUrl), encoding: String.Encoding.utf8) else {

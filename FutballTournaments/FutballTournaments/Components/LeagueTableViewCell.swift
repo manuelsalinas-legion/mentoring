@@ -31,7 +31,8 @@ class LeagueTableViewCell: UITableViewCell {
     // set outlet values of the data from TableViewController
     func loadInfo(_ competition: Competition) {
         self.labelTitle?.text = competition.strLeague
-        self.labelSubTitle?.text = competition.strLeagueAlternate
+        self.labelSubTitle?.text = competition.strLeagueAlternate // FIXME: If league altername is empty, hide subtitle label
+        
         if let urlImage = URL(string: competition.logo ?? "") {
             self.imageLeague?.loadRemote(url: urlImage)
         } else {

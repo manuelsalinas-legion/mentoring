@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// FIXME: rename swift file with template  Class+Extension
 extension UIImageView {
     
     // set image from url asynchronously

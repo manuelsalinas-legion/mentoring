@@ -53,6 +53,8 @@ class DetailsLeagueViewController: UIViewController {
     }
     
     // MARK:- Functions
+    // FIXME: Private Access level missing in function
+    // FIXME: method names should start with a verb, Dont't use language reserverd words or classes like URLSessions
     func URLSessions(urlString: String) {
         let url = URL(string: urlString)
         guard let requestURL = url else { fatalError("URL not valid") }
