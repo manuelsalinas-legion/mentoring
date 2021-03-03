@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// FIXME: remove this file if you don't use it 
+// FIXME: (Delete fixme if done) remove this file if you don't use it 
 class ViewController: UIViewController {
     
     

@@ -7,4 +7,4 @@
 
 import Foundation
 
-// FIXME: delete file if you dont' use it
+// FIXME: (Delete fixme if done) delete file if you dont' use it

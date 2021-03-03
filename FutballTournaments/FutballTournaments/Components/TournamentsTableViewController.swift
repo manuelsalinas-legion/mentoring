@@ -29,7 +29,8 @@ class TournamentsTableViewController: UITableViewController {
     
     // MARK: - Functions
     /// Obtain Json data
-    // FIXME: Private Access level missing in function
+    // FIXME: (Delete fixme if done) Private Access level missing in function
+    // FIXME: (Delete fixme if done) missing dev friendly method name
     func getJson() {
         guard let jsonUrl = Bundle(for: type(of: self)).path(forResource: "soccer_info", ofType: "json") else { return }
         guard let jsonString = try? String(contentsOf: URL(fileURLWithPath: jsonUrl), encoding: String.Encoding.utf8) else {
@@ -67,6 +68,7 @@ class TournamentsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // league custom cell
+        // FIXME: (Delete fixme if done) OPTIONAL TOURNAMENT SHOULD BE HANDLED IN THE CELL (ENCAPSULATION), HERE YOU ONLY NEED TO BE WORRY ABOUT CELL ROWS 
         if let competition = self.tournaments[indexPath.section].competitions?[indexPath.row] {
             
             let customCell: LeagueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "LeagueTableViewCell") as! LeagueTableViewCell
@@ -95,6 +97,7 @@ class TournamentsTableViewController: UITableViewController {
             
             vcDetailsLeague.leagueSelected = leagueSelect
             
+            // FIXME: (Delete fixme if done) MISSING NAVIGATION CONTROLLER
             self.navigationController?.pushViewController(vcDetailsLeague, animated: true)
         }
     }
@@ -106,5 +109,7 @@ class TournamentsTableViewController: UITableViewController {
             headerView.textLabel?.textColor = .white
             headerView.textLabel?.font = UIFont.boldSystemFont(ofSize: 24)
         }
+        
+        // FIXME: (Delete fixme if done) SECTION TITLE LOOKS BIGGER.  MISSING STYLED 
     }
 }
