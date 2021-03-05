@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="107" id="KGk-i7-Jjw" customClass="LeagueTableViewCell" customModule="FutballTournaments" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="309" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="strLeague" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwb-qL-TnJ">
+                        <rect key="frame" x="90" y="15" width="73" height="20"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gpg-R4-aK0">
+                        <rect key="frame" x="10" y="10" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="PiR-MU-6Ix"/>
+                            <constraint firstAttribute="height" constant="65" id="SBR-Nv-9SZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="strLeagueAlternative" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZa-B0-oYa">
+                        <rect key="frame" x="90" y="40" width="129" height="19.5"/>
+                        <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="kwb-qL-TnJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="23A-cc-kaN"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gpg-R4-aK0" secondAttribute="bottom" constant="10" id="5jW-82-v1L"/>
+                    <constraint firstItem="kwb-qL-TnJ" firstAttribute="leading" secondItem="gpg-R4-aK0" secondAttribute="trailing" constant="15" id="FmC-bd-bv0"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EZa-B0-oYa" secondAttribute="trailing" constant="20" id="RQq-Fd-wjU"/>
+                    <constraint firstItem="EZa-B0-oYa" firstAttribute="top" secondItem="kwb-qL-TnJ" secondAttribute="bottom" constant="5" id="eAe-Wu-aUs"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kwb-qL-TnJ" secondAttribute="trailing" constant="20" id="eQc-tH-bhW"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EZa-B0-oYa" secondAttribute="bottom" constant="15" id="fdX-Uh-uRH"/>
+                    <constraint firstItem="gpg-R4-aK0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lqt-sz-Lnp"/>
+                    <constraint firstItem="gpg-R4-aK0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="orX-3I-TWZ"/>
+                    <constraint firstItem="EZa-B0-oYa" firstAttribute="leading" secondItem="kwb-qL-TnJ" secondAttribute="leading" id="tgc-Jr-jyK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="imageLeague" destination="gpg-R4-aK0" id="VE2-yL-mWh"/>
+                <outlet property="labelSubTitle" destination="EZa-B0-oYa" id="Inf-AU-fNy"/>
+                <outlet property="labelTitle" destination="kwb-qL-TnJ" id="WJb-Mw-dGp"/>
+            </connections>
+            <point key="canvasLocation" x="146.37681159420291" y="99.441964285714278"/>
+        </tableViewCell>
+    </objects>
+</document>
