@@ -34,6 +34,8 @@
 		2B6330B725EDE14E00F028E9 /* StadiumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6330B525EDE14E00F028E9 /* StadiumTableViewCell.xib */; };
 		2B6330BB25EF2AC800F028E9 /* JerseyImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6330BA25EF2AC800F028E9 /* JerseyImageViewController.swift */; };
 		2B6330C125F1B41E00F028E9 /* AlertView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6330C025F1B41E00F028E9 /* AlertView+Extension.swift */; };
+		2B7EC56B25F802D00021E3CF /* JerseyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EC56925F802D00021E3CF /* JerseyTableViewCell.swift */; };
+		2B7EC56C25F802D00021E3CF /* JerseyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EC56A25F802D00021E3CF /* JerseyTableViewCell.xib */; };
 		2BCEF6E625F1F7FF00854639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B63302625E5E2C700F028E9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		2B6330B525EDE14E00F028E9 /* StadiumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StadiumTableViewCell.xib; sourceTree = "<group>"; };
 		2B6330BA25EF2AC800F028E9 /* JerseyImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JerseyImageViewController.swift; sourceTree = "<group>"; };
 		2B6330C025F1B41E00F028E9 /* AlertView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertView+Extension.swift"; sourceTree = "<group>"; };
+		2B7EC56925F802D00021E3CF /* JerseyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JerseyTableViewCell.swift; sourceTree = "<group>"; };
+		2B7EC56A25F802D00021E3CF /* JerseyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JerseyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 				2B63308625E8DC0400F028E9 /* TeamTableViewCell.xib */,
 				2B6330B425EDE14E00F028E9 /* StadiumTableViewCell.swift */,
 				2B6330B525EDE14E00F028E9 /* StadiumTableViewCell.xib */,
+				2B7EC56925F802D00021E3CF /* JerseyTableViewCell.swift */,
+				2B7EC56A25F802D00021E3CF /* JerseyTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				2B63302D25E5E2C800F028E9 /* LaunchScreen.storyboard in Resources */,
 				2B63302A25E5E2C800F028E9 /* Assets.xcassets in Resources */,
 				2B63304C25E815C200F028E9 /* LeagueTableViewCell.xib in Resources */,
+				2B7EC56C25F802D00021E3CF /* JerseyTableViewCell.xib in Resources */,
 				2B63303725E5E5AE00F028E9 /* soccer_info.json in Resources */,
 				2B63308825E8DC0400F028E9 /* TeamTableViewCell.xib in Resources */,
 			);
@@ -278,6 +285,7 @@
 				2B6330B625EDE14E00F028E9 /* StadiumTableViewCell.swift in Sources */,
 				2B6330A625ED3EF400F028E9 /* TeamDetailsResponse.swift in Sources */,
 				2B63309525E94BBB00F028E9 /* UIView+Extension.swift in Sources */,
+				2B7EC56B25F802D00021E3CF /* JerseyTableViewCell.swift in Sources */,
 				2B63306E25E8C46C00F028E9 /* TeamDetails.swift in Sources */,
 				2B63308725E8DC0400F028E9 /* TeamTableViewCell.swift in Sources */,
 				2B63302325E5E2C700F028E9 /* SceneDelegate.swift in Sources */,

@@ -48,25 +48,17 @@ class TeamSelectedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         title = teamSelected?.strTeam ?? ""
         // set label text
         self.labelstrTeam?.text = teamSelected?.strTeam ?? ""
-        
-        // set images from URL if there not a url set a default image
-        if let imageTeamBadge = URL(string: teamSelected?.strTeamBadge ?? "") {
-            self.imageStrTeamBadge.loadRemote(url: imageTeamBadge)
-        } else {
-            self.imageStrTeamBadge.image = UIImage(named: "placeholderPicture")
-        }
-        if let imageBanner = URL(string: teamDetails?.strTeamBanner ?? "") {
-            self.imageBanner.loadRemote(url: imageBanner)
-        } else {
-            self.imageBanner.image = UIImage(named: "placeholderPicture")
-        }
+        // set image from team selectet
+        self.setBadgeImage()
         
         // Register table cells
-        self.tableView.register(UINib(nibName: "InfoTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoTableViewCell")
+//        self.tableView.register(UINib(nibName: "InfoTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoTableViewCell")
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+        self.tableView.register(UINib(nibName: "JerseyTableViewCell", bundle: nil), forCellReuseIdentifier: "JerseyTableViewCell")
         self.tableView.register(UINib(nibName: "StadiumTableViewCell", bundle: nil), forCellReuseIdentifier: "StadiumTableViewCell")
         
         // add close button
@@ -81,6 +73,26 @@ class TeamSelectedViewController: UIViewController {
     }
     
     // MARK:- Functions
+    
+     private func setBadgeImage() {
+        if let imageTeamBadge = URL(string: self.teamSelected?.strTeamBadge ?? "") {
+            self.imageStrTeamBadge.loadRemote(url: imageTeamBadge)
+        } else {
+            self.imageStrTeamBadge.image = UIImage(named: "placeholderPicture")
+        }
+    }
+    
+    private func setBannerImage() {
+        DispatchQueue.main.async {
+            if let imageBanner = URL(string: self.teamDetails?.strTeamBanner ?? "") {
+                self.imageBanner.loadRemote(url: imageBanner)
+            } else {
+                self.imageBanner.image = UIImage(named: "placeholderPicture")
+            }
+        }
+    }
+    
+    /// Get team info from API, parse data and call to set image.
     func URLSessionsGetTeam(urlString: String) {
         let url = URL(string: urlString)
         guard let requestURL = url else { fatalError("URL not valid") }
@@ -101,6 +113,7 @@ class TeamSelectedViewController: UIViewController {
                 do {
                     let result = try jsonDecoder.decode(TeamDetailsResponse.self, from: dataString.data(using: .utf8)!)
                     self.teamDetails = result.teams?[0]
+                    self.setBannerImage()
                 } catch {
                     AlertView.showAlert(view: self, title: "Error", message: "The data can't be show")
                     print(error.localizedDescription)
@@ -110,6 +123,7 @@ class TeamSelectedViewController: UIViewController {
         task.resume()
     }
     
+    /// Get Jersey from API and parse data
     func URLSessionsGetJersey(urlString: String) {
         let url = URL(string: urlString)
         guard let requestURL = url else { fatalError("URL not valid") }
@@ -194,7 +208,11 @@ extension TeamSelectedViewController: UITableViewDelegate, UITableViewDataSource
             cellJersey.textLabel?.text = strType + ", " + strSeason
             cellJersey.textLabel?.numberOfLines = 0
             cellJersey.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-            return cellJersey
+            
+            let jerseyCustomCell = tableView.dequeueReusableCell(withIdentifier: "JerseyTableViewCell") as! JerseyTableViewCell
+            jerseyCustomCell.loadInfo(jerseyByTeam: jerseyByTeam?[indexPath.row])
+            
+            return jerseyCustomCell
             
         case "STADIUM":
             let customCell: StadiumTableViewCell = tableView.dequeueReusableCell(withIdentifier: "StadiumTableViewCell") as! StadiumTableViewCell
@@ -224,6 +242,15 @@ extension TeamSelectedViewController: UITableViewDelegate, UITableViewDataSource
             headerView.contentView.backgroundColor = .brown
             headerView.textLabel?.textColor = .white
             headerView.textLabel?.font = UIFont.init(name: "Marker Felt", size: 19)
+        }
+    }
+    
+    // Edit row heigh
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if TeamSections.allCases[indexPath.section].rawValue == "STADIUM" {
+            return 150
+        } else {
+            return tableView.rowHeight
         }
     }
 }

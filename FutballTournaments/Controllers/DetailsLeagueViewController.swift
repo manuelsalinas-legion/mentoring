@@ -110,6 +110,7 @@ extension DetailsLeagueViewController: UITableViewDelegate, UITableViewDataSourc
             let navController = UINavigationController(rootViewController: vcTeamSelected)
             navController.navigationBar.isTranslucent = false
             navController.modalPresentationStyle = .fullScreen
+            navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
             vcTeamSelected.teamSelected = teamsByCompetition?[indexPath.row]
             self.present(navController, animated: true, completion: nil)
         }
