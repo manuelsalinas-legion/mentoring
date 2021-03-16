@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B02251F2600F94E00CE7E37 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02251E2600F94E00CE7E37 /* TabBarViewController.swift */; };
 		2B63302125E5E2C700F028E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63302025E5E2C700F028E9 /* AppDelegate.swift */; };
 		2B63302325E5E2C700F028E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63302225E5E2C700F028E9 /* SceneDelegate.swift */; };
 		2B63302A25E5E2C800F028E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63302925E5E2C800F028E9 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B02251E2600F94E00CE7E37 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		2B63301D25E5E2C700F028E9 /* FutballTournaments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutballTournaments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B63302025E5E2C700F028E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B63302225E5E2C700F028E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				2BEFDE0325F1EB1A009386A3 /* TableViewCells */,
+				2B02251E2600F94E00CE7E37 /* TabBarViewController.swift */,
 				2B63304625E6B33F00F028E9 /* TournamentsTableViewController.swift */,
 				2B63305925E8AC3000F028E9 /* DetailsLeagueViewController.swift */,
 				2B63309C25EBED0400F028E9 /* TeamSelectedViewController.swift */,
@@ -285,6 +288,7 @@
 				2B6330B625EDE14E00F028E9 /* StadiumTableViewCell.swift in Sources */,
 				2B6330A625ED3EF400F028E9 /* TeamDetailsResponse.swift in Sources */,
 				2B63309525E94BBB00F028E9 /* UIView+Extension.swift in Sources */,
+				2B02251F2600F94E00CE7E37 /* TabBarViewController.swift in Sources */,
 				2B7EC56B25F802D00021E3CF /* JerseyTableViewCell.swift in Sources */,
 				2B63306E25E8C46C00F028E9 /* TeamDetails.swift in Sources */,
 				2B63308725E8DC0400F028E9 /* TeamTableViewCell.swift in Sources */,
